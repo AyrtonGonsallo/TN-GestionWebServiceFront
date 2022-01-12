@@ -32,11 +32,10 @@
                                         <tr> <th>Adresse Legale</th><td>{{client.adresselegale}}</td></tr>
                                         <tr> <th> Email</th> <td>{{client.email}}</td></tr>
                                         <tr><th>Ville</th><td>{{client.ville}}</td></tr>
-                                        <tr><th>Voir plus</th><td><a>details</a></td></tr>
                                    </table>
 							</div>
 							<div class="col-md-4 col-sm-4">
-								<table class="table table-dark table-hover">
+								<table class="table table-dark table-hover" *ngIf="client.piece_identite">
                                     <td class="text-primary bg-light" colspan="2"><h3>Infos Piece</h3></td>
                                     <tr><th>IdPiece</th><td>{{client.piece_identite.id}}</td></tr>
                                     <tr><th> Type</th><td>{{client.piece_identite.type_piece_identite}}</td></tr>
@@ -47,7 +46,7 @@
                                  </table>
                                                         
 							</div>	
-							<div class="col-md-4 col-sm-4">
+							<div class="col-md-4 col-sm-4" *ngIf="client.comptes?.length > 0">
 								
                                 <h3 class="text-primary bg-light" >Infos Comptes</h3>
                                 <tr *ngFor="let compte of client.comptes">
@@ -65,8 +64,8 @@
 						<div class="row">
 							<div class="col-md-4 col-sm-4"></div>
 
-							<div class="col-md-4 col-sm-4">
-								<table class="table table-dark table-hover">
+							<div class="col-md-4 col-sm-4" *ngIf="client.wallet">
+								<table class="table table-dark table-hover" *ngIf="client.wallet.cartes?.length > 0">
                                     <td class="text-primary bg-light" colspan="2"><h3>Infos Wallet</h3></td>
                                     <tr><th>IdWallet</th><td>{{client.wallet.id}}</td></tr>
                                     <tr>Liste des cartes du wallet</tr>
