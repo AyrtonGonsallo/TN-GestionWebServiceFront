@@ -1,0 +1,37 @@
+
+<h1>Tout les Clients</h1>
+
+<table class="table table-dark table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th>IdClient</th>
+        <th> Nom</th>
+        <th>Prenom</th>
+        <th>Telephone</th>
+        <th>Sexe</th>
+        <th> Profession</th>
+        <th>Type</th>
+        <th>Pays d'adresse</th>
+        <th>Adresse Legale</th>
+        <th> Email</th>
+        <th>Ville</th>
+        <th>Voir plus</th>
+    </tr>
+   </thead>
+   <tbody class="thead-light">
+    <tr *ngFor="let client of clients">
+        <td>{{client.idClient}}</td>
+        <td>{{client.nom}}</td>
+        <td>{{client.prenom}}</td>
+        <td>{{client.telephone}}</td>
+        <td>{{client.sexe}}</td>
+        <td>{{client.profession}}</td>
+        <td>{{client.type}}</td>
+        <td>{{client.pays_d_adresse}}</td>
+        <td>{{client.adresselegale}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.ville}}</td>
+        <td><a>details</a></td>
+    </tr>
+</tbody>
+</table>
