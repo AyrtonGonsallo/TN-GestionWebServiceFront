@@ -14,7 +14,7 @@ import { CreateBeneficiaireComponent } from './beneficiaires/create-beneficiaire
 import { GetBeneficiaireComponent } from './beneficiaires/get-beneficiaire/get-beneficiaire.component';
 import { GetEmetteurComponent } from './emetteurs/get-emetteur/get-emetteur.component';
 import {HttpClientModule} from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ClientDetailsComponent } from './clients/client-details/client-details.component';
 
 @NgModule({
@@ -36,7 +36,8 @@ import { ClientDetailsComponent } from './clients/client-details/client-details.
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

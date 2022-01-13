@@ -4,7 +4,7 @@ import{TypeClient} from "./enums/TypeClient.model"
 import{Sexe} from "./enums/Sexe.model"
 import { Wallet } from "./Wallet.model";
 export class Client{
-    idClient:number=0;
+    //idClient:number=null;
     nom:String="";
     prenom:String="";
     telephone:String="";

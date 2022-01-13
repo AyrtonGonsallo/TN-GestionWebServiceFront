@@ -1,3 +1,3 @@
 export enum TypeClient{
-    partenaire,de_passage
+    partenaire="partenaire",de_passage="de_passage"
 }

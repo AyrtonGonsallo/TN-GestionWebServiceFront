@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ApiResponse } from '../model/Api.response';
+import { Client } from '../model/Client.model';
 
 
 @Injectable({
@@ -15,6 +16,9 @@ export class ClientServiceService {
   }
   public getClient(id:number){
     return this.http.get("http://localhost:1945/get_client/"+id);
+  }
+  public addClient(client:Client){
+    return this.http.post("http://localhost:1945/add_client/",client);
   }
 
 }

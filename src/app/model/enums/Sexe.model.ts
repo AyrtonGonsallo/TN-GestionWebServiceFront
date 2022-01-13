@@ -1,3 +1,3 @@
 export enum Sexe{
-    M,Mme
+    M="M",Mme="Mme"
 }

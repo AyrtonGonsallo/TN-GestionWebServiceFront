@@ -1,3 +1,3 @@
 export enum TypePieceIdentite{
-    passeport,carteNationale
+    passeport="passeport",carteNationale="carteNationale"
 }

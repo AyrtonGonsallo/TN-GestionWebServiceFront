@@ -1,3 +1,3 @@
 export enum TypeCompte{
-    commission, cantonnement, fonctionnement
+    commission="commission", cantonnement="cantonnement", fonctionnement="fonctionnement"
 }
