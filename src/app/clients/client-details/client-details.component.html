@@ -40,9 +40,9 @@
                                     <tr><th>IdPiece</th><td>{{client.piece_identite.id}}</td></tr>
                                     <tr><th> Type</th><td>{{client.piece_identite.type_piece_identite}}</td></tr>
                                         <tr>    <th>numero Piece</th><td>{{client.piece_identite.numero}}</td></tr>
-                                            <tr>     <th>Date de naissance</th><td>{{client.piece_identite.date_de_naissance}}</td></tr>
+                                            <tr>     <th>Date de naissance</th><td>{{client.piece_identite.date_de_naissance | date:'d MMMM y'}}</td></tr>
                                                 <tr>     <th>Pays</th><td>{{client.piece_identite.pays}}</td></tr>
-                                                    <tr>    <th> Date d'expiration</th><td>{{client.piece_identite.date_d_expiration}}</td></tr>
+                                                    <tr>    <th> Date d'expiration</th><td>{{client.piece_identite.date_d_expiration | date:'d MMMM y'}}</td></tr>
                                  </table>
                                                         
 							</div>	
@@ -53,7 +53,7 @@
                                     <table class="table table-dark table-hover">
                                         <tr><th>IdCompte</th><td>{{compte.idCompte}}</td></tr>
                                         <tr><th>montant</th><td>{{compte.montant}}</td></tr>
-                                        <tr><th>date d'ouverture</th><td>{{compte.date_ouverture}}</td></tr>
+                                        <tr><th>date d'ouverture</th><td>{{compte.date_ouverture | date:'d MMMM y'}}</td></tr>
                                         <tr><th>Type</th><td>{{compte.type}}</td></tr>
                                     </table>
 								</tr>					
@@ -73,7 +73,7 @@
                                         <table class="table table-dark table-hover">
                                             <tr><th>IdCarte</th><td>{{carte.id}}</td></tr>
                                             <tr><th>montant</th><td>{{carte.montant}}</td></tr>
-                                            <tr><th>date_expiration</th><td>{{carte.date_expiration}}</td></tr>
+                                            <tr><th>date_expiration</th><td>{{carte.date_expiration| date:'d MMMM y'}}</td></tr>
                                             
                                         </table>
                                     </tr>	

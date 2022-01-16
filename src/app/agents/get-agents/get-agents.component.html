@@ -1,0 +1,48 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Raleway:500,800" rel="stylesheet">
+<div class="container col-md-12">
+
+<h1>Tout les agents</h1>
+
+<table class="table table-dark table-hover">
+    <thead class="">
+    <tr class="text-primary bg-light">
+        <th>Idagent</th>
+        <th> Nom</th>
+        <th>Prenom</th>
+        <th>Telephone</th>
+        <th>Sexe</th>
+        <th> Profession</th>
+        <th>Type</th>
+        <th>Pays d'adresse</th>
+        <th>Adresse Legale</th>
+        <th> Email</th>
+        <th>Ville</th>
+        <th>Voir plus</th>
+    </tr>
+   </thead>
+   <tbody class="thead-light">
+    <tr *ngFor="let agent of agents">
+        <td>{{agent.idClient}}</td>
+        <td>{{agent.nom}}</td>
+        <td>{{agent.prenom}}</td>
+        <td>{{agent.telephone}}</td>
+        <td>{{agent.sexe}}</td>
+        <td>{{agent.profession}}</td>
+        <td>{{agent.type}}</td>
+        <td>{{agent.pays_d_adresse}}</td>
+        <td>{{agent.adresselegale}}</td>
+        <td>{{agent.email}}</td>
+        <td>{{agent.ville}}</td>
+        <td><a href="{{'getAgent/'+agent.idClient}}">details</a></td>
+    </tr>
+</tbody>
+</table>
+</div>

@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  id:number=1;
-  title = 'TN-GestionWebServiceFront';
+  
 }

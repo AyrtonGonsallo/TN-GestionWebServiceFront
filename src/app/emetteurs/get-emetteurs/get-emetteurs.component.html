@@ -1,0 +1,48 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Raleway:500,800" rel="stylesheet">
+<div class="container col-md-12">
+
+<h1>Tout les emetteurs</h1>
+
+<table class="table table-dark table-hover">
+    <thead class="">
+    <tr class="text-primary bg-light">
+        <th>Idemetteur</th>
+        <th> Nom</th>
+        <th>Prenom</th>
+        <th>Telephone</th>
+        <th>Sexe</th>
+        <th> Profession</th>
+        <th>Type</th>
+        <th>Pays d'adresse</th>
+        <th>Adresse Legale</th>
+        <th> Email</th>
+        <th>Ville</th>
+        <th>Voir plus</th>
+    </tr>
+   </thead>
+   <tbody class="thead-light">
+    <tr *ngFor="let emetteur of emetteurs">
+        <td>{{emetteur.idClient}}</td>
+        <td>{{emetteur.nom}}</td>
+        <td>{{emetteur.prenom}}</td>
+        <td>{{emetteur.telephone}}</td>
+        <td>{{emetteur.sexe}}</td>
+        <td>{{emetteur.profession}}</td>
+        <td>{{emetteur.type}}</td>
+        <td>{{emetteur.pays_d_adresse}}</td>
+        <td>{{emetteur.adresselegale}}</td>
+        <td>{{emetteur.email}}</td>
+        <td>{{emetteur.ville}}</td>
+        <td><a href="{{'getEmetteur/'+emetteur.idClient}}">details</a></td>
+    </tr>
+</tbody>
+</table>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClientServiceService } from 'src/app/services/client-service.service';
 
 @Component({
   selector: 'app-get-beneficiaire',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetBeneficiaireComponent implements OnInit {
 
-  constructor() { }
+  beneficiaires:any;
+
+  constructor(private clientService:ClientServiceService) { }
 
   ngOnInit(): void {
+    let resp=this.clientService.getBeneficiaires();
+    resp.subscribe((data)=>{
+      console.log(data);
+      this.beneficiaires=data;
+    })
   }
 
 }

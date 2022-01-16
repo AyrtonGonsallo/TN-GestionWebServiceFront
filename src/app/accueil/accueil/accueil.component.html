@@ -1,0 +1,20 @@
+<div class="topnav" style="margin: 10px;"> 
+    <a  (click)="go('Agent')" style="cursor:pointer">Agents</a>
+    <a (click)="go('Beneficiaire')" style="cursor:pointer">Beneficiares</a>
+   <a  (click)="go('CarteDeCredit')" style="cursor:pointer">Cartes De Credit</a>  
+   <a class="active" (click)="go('Client')" style="cursor:pointer">Clients</a>
+   <a  (click)="go('Compte')" style="cursor:pointer">Comptes</a>
+   <a  (click)="go('Emetteur')" style="cursor:pointer">Emetteurs</a>
+    <a  (click)="go('GichetABillet')" style="cursor:pointer">Gichets A Billets</a>
+   <a  (click)="go('PieceIdentite')" style="cursor:pointer">Pieces d'Identite</a>
+   <a  (click)="go('PointDeVente')" style="cursor:pointer">Points De Ventes</a>
+    <a  (click)="go('Wallet')" style="cursor:pointer">Wallets</a>
+    <a  (click)="go('Transfert')" style="cursor:pointer">Transferts</a>
+</div>
+<div class="topnav" style="margin: 10px;">
+  <a class="active" routerLink="{{'get'+page+'s'}}">Afficher {{page}}s</a>
+  <a routerLink="{{'add'+page}}">Ajouter {{page}}</a>
+  <a  routerLink="{{'get'+page+'/'+id}}">Consulter {{page}}</a>
+  <input type="text" [(ngModel)]="id">
+</div>
+<router-outlet></router-outlet>

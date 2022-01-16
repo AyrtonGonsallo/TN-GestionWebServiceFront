@@ -14,12 +14,33 @@ import { CreateBeneficiaireComponent } from './beneficiaires/create-beneficiaire
 import { GetBeneficiaireComponent } from './beneficiaires/get-beneficiaire/get-beneficiaire.component';
 import { GetEmetteurComponent } from './emetteurs/get-emetteur/get-emetteur.component';
 import {HttpClientModule} from '@angular/common/http';
+import { GetPiecesIdentitesComponent } from './pieces/get-pieces-identites/get-pieces-identites.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { ClientDetailsComponent } from './clients/client-details/client-details.component';
+import { AccueilComponent } from './accueil/accueil/accueil.component';
+import { GetAgentsComponent } from './agents/get-agents/get-agents.component';
+import { GetPointsDeventeComponent } from './points/get-points-devente/get-points-devente.component';
+import { GetEmetteursComponent } from './emetteurs/get-emetteurs/get-emetteurs.component';
+import { GetGichetsComponent } from './gichets/get-gichets/get-gichets.component';
+import { GetWalletsComponent } from './wallets/get-wallets/get-wallets.component';
+import { GetTransfertsComponent } from './transferts/get-transferts/get-transferts.component';
+import { GetComptesComponent } from './comptes/get-comptes/get-comptes.component';
+import { GetCartesComponent } from './cartes/get-cartes/get-cartes.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { ClientServiceService } from 'src/app/services/client-service.service';
+import { CreateAgentsComponent } from './agents/create-agents/create-agents.component';
+import { CreateCarteComponent } from './cartes/create-carte/create-carte.component';
+import { CreateCompteComponent } from './comptes/create-compte/create-compte.component';
+import { CreateGichetComponent } from './gichets/create-gichet/create-gichet.component';
+import { CreatePieceComponent } from './pieces/create-piece/create-piece.component';
+import { CreatePointDVComponent } from './points/create-point-dv/create-point-dv.component';
+import { CreateWalletComponent } from './wallets/create-wallet/create-wallet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    GetPiecesIdentitesComponent,
     CreateClientsComponent,
     GetClientsInfosComponent,
     GetTransfertInfosComponent,
@@ -30,16 +51,35 @@ import { ClientDetailsComponent } from './clients/client-details/client-details.
     CreateBeneficiaireComponent,
     GetBeneficiaireComponent,
     GetEmetteurComponent,
-    ClientDetailsComponent
+    ClientDetailsComponent,
+    AccueilComponent,
+    GetAgentsComponent,
+    GetPointsDeventeComponent,
+    GetEmetteursComponent,
+    GetGichetsComponent,
+    GetWalletsComponent,
+    GetTransfertsComponent,
+    GetComptesComponent,
+    GetCartesComponent,
+    CreateAgentsComponent,
+    CreateCarteComponent,
+    CreateCompteComponent,
+    CreateGichetComponent,
+    CreatePieceComponent,
+    CreatePointDVComponent,
+    CreateWalletComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
+    
   ],
-  providers: [],
+  providers: [ClientServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

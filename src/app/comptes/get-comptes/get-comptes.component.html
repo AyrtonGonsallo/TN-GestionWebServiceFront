@@ -1,0 +1,34 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Raleway:500,800" rel="stylesheet">
+<div class="container col-md-12">
+
+<h1>Tout les comptes</h1>
+
+<table class="table table-dark table-hover">
+    <thead class="">
+    <tr class="text-primary bg-light">
+        <th>Idcompte</th>
+        <th>Client</th>
+        <th>Date d'ouverture</th>
+        <th>Montant</th>
+        <th>Type</th>
+    </tr>
+   </thead>
+   <tbody class="thead-light">
+    <tr *ngFor="let compte of comptes">
+        <td>{{compte.idCompte}}</td>
+        <td>{{compte.client.nom}} {{compte.client.prenom}}</td>
+        <td>{{compte.date_ouverture | date:'d MMMM y'}}</td>
+        <td>{{compte.montant}}</td>
+        <td>{{compte.type}}</td>
+    </tr>
+</tbody>
+</table>
+</div>

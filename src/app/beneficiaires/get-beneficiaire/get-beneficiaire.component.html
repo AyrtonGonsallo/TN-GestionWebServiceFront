@@ -1,1 +1,48 @@
-<p>get-beneficiaire works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Raleway:500,800" rel="stylesheet">
+<div class="container col-md-12">
+
+<h1>Tout les beneficiaires</h1>
+
+<table class="table table-dark table-hover">
+    <thead class="">
+    <tr class="text-primary bg-light">
+        <th>Idbeneficiaire</th>
+        <th> Nom</th>
+        <th>Prenom</th>
+        <th>Telephone</th>
+        <th>Sexe</th>
+        <th> Profession</th>
+        <th>Type</th>
+        <th>Pays d'adresse</th>
+        <th>Adresse Legale</th>
+        <th> Email</th>
+        <th>Ville</th>
+        <th>Voir plus</th>
+    </tr>
+   </thead>
+   <tbody class="thead-light">
+    <tr *ngFor="let beneficiaire of beneficiaires">
+        <td>{{beneficiaire.idClient}}</td>
+        <td>{{beneficiaire.nom}}</td>
+        <td>{{beneficiaire.prenom}}</td>
+        <td>{{beneficiaire.telephone}}</td>
+        <td>{{beneficiaire.sexe}}</td>
+        <td>{{beneficiaire.profession}}</td>
+        <td>{{beneficiaire.type}}</td>
+        <td>{{beneficiaire.pays_d_adresse}}</td>
+        <td>{{beneficiaire.adresselegale}}</td>
+        <td>{{beneficiaire.email}}</td>
+        <td>{{beneficiaire.ville}}</td>
+        <td><a href="{{'getBeneficiare/'+beneficiaire.idClient}}">details</a></td>
+    </tr>
+</tbody>
+</table>
+</div>

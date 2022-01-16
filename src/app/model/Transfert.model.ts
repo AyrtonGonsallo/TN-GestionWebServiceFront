@@ -1,4 +1,4 @@
-import { Agent } from "http";
+import { Agent } from "./Agent.model";
 import { Beneficiaire } from "./Beneficiare.model";
 import { Emetteur } from "./Emetteur.model";
 import { EtatTransfert } from "./enums/EtatTransfert.model";
@@ -22,12 +22,12 @@ export class Transfert{
     montant_operation:number=0;
     comission:number=0;
     frais:number=0;
-    emetteur:Emetteur=new Emetteur;
-    agent:Agent=new Agent;
+    //emetteur:Emetteur=new Emetteur;
+    //agent:Agent=new Agent;
     pays_d_emission:String="Maroc";
-    beneficiaire:Beneficiaire=new Beneficiaire;
+    //beneficiaire:Beneficiaire=new Beneficiaire;
     motif:MotifTransfert=MotifTransfert.Frais_de_dépassement;
-    transfertMultiple:TransfertMultiple=new TransfertMultiple;
-    lieuDeService:LieuDeTravail=new LieuDeTravail;
-    lieuDeDemande:LieuDeTravail=new LieuDeTravail;
+    transfertMultiple?:TransfertMultiple;
+    lieuDeService?:LieuDeTravail;
+    lieuDeDemande?:LieuDeTravail;
 }

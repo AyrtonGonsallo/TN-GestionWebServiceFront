@@ -1,0 +1,35 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Raleway:500,800" rel="stylesheet">
+<div class="container col-md-12">
+
+<h1>Tout les points de vente</h1>
+
+<table class="table table-dark table-hover">
+    <thead class="">
+    <tr class="text-primary bg-light">
+        <th>Id</th>
+        <th>ville</th>
+        <th>numero de ville</th>
+        <th>Pays</th> 
+        <th>montant maximal</th>
+       
+    </tr>
+   </thead>
+   <tbody class="thead-light">
+    <tr *ngFor="let point of points">
+        <td>{{point.id}}</td>
+        <td>{{point.ville}}</td>
+        <td>{{point.numero_de_ville}}</td>
+        <td>{{point.pays}}</td>
+        <td>{{point.montant_maximal}}</td>
+    </tr>
+</tbody>
+</table>
+</div>

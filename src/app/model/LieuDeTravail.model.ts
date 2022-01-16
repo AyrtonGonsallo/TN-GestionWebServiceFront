@@ -5,6 +5,6 @@ export class LieuDeTravail{
     numero_de_ville:number=0;
     ville:String="";
     pays:String="Maroc";
-    transfert_demandes:Array<Transfert>=[];
-    transert_servis:Array<Transfert>=[];
+    transfert_demandes?:Array<Transfert>;
+    transert_servis?:Array<Transfert>;
 }
