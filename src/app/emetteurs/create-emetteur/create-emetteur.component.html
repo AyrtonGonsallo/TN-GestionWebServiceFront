@@ -216,9 +216,9 @@
                     </thead>
                     <tbody class="thead-light">
                         <tr *ngFor="let beneficiaire of beneficiaires; let i=index">
-                            <td *ngIf="! beneficiaire.emetteur?.idClient">{{beneficiaire.idClient}}</td>
-                            <td *ngIf="! beneficiaire.emetteur?.idClient">{{beneficiaire.nom}} {{beneficiaire.prenom}}</td>
-                            <td *ngIf="! beneficiaire.emetteur?.idClient">{{i}}</td>
+                            <td >{{beneficiaire.idClient}}</td>
+                            <td >{{beneficiaire.nom}} {{beneficiaire.prenom}}</td>
+                            <td >{{i}}</td>
                         </tr>
                     </tbody>
                     </table>

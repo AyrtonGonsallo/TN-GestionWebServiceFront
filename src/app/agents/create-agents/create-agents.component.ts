@@ -103,11 +103,11 @@ export class CreateAgentsComponent implements OnInit {
           this.agent.wallet.cartes.push(nvCarte);
         }
       }
-      if(agentValue['numeroPDV']>1){
+      if(agentValue['numeroPDV']>0){
         console.log("pdv saisi")
         var pdv=new PointDeVente();
         this.agent.pointdevente=pdv;
-        this.agent.pointdevente.montant_maximal=agentValue['montantPDV'];
+        this.agent.pointdevente.montant_maximal=agentValue['montantMaxPDV'];
         this.agent.pointdevente.pays=agentValue['paysPDV'];
         this.agent.pointdevente.ville=agentValue['villePDV'];
         this.agent.pointdevente.numero_de_ville=agentValue['numeroPDV'];

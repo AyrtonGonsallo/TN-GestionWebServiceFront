@@ -1,1 +1,80 @@
-<p>create-carte works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Raleway:500,800" rel="stylesheet">
+<div class="best-plan">
+    <div class="container" >
+					<div class="best-plan__head">
+						<div class="row">
+							<div class="col-md-12">
+								<h3 class="best-plan__title">Ajouter Carte</h3>								
+							</div>
+						</div>
+					</div>
+             <form class="form-horizontal" [formGroup]="carteDeCreditForm" (ngSubmit)="ajouter()" >
+
+					<div class="b_plan_body">					
+						<div class="row">
+							<div class="col-md-4 col-sm-4 card" >
+                                <h2>Donnees Carte</h2>
+								
+                                    <div class="form-group">
+                                        <label for="montant" class="cols-sm-2 control-label">montant</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="number" step="2000" class="form-control" autocomplete="off" name="montant" id="montant" placeholder="montant" formControlName="montant"/>
+                                            </div>
+                                        </div>
+                                        <label for="date_expiration" class="cols-sm-2 control-label">date_expiration</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="date" class="form-control" autocomplete="off" name="date_expiration" id="date_expiration"  placeholder="date_expiration" formControlName="date_expiration"/>
+                                            </div>
+                                        </div>
+                                        <label for="wallet" class="cols-sm-2 control-label">position wallet</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" step="1" name="wallet" id="wallet"   formControlName="wallet"/>
+                                            </div>
+                                        </div>
+                                   </div>
+                           </div>
+                           
+							<div class="col-md-4 col-sm-4 card" >
+                                <h1>Tout les wallets</h1>
+                        <table class="table table-dark table-hover">
+                        <thead class="">
+                        <tr class="text-primary bg-light">
+                            <th>Wallet Id</th>
+                            <th>Position</th>
+                            <th>Cartes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="thead-light">
+                        <tr *ngFor="let wallet of wallets; let i=index">
+                            <td >{{wallet.id}}</td>
+                            <td >{{i}}</td>
+                            <td><tr *ngFor="let carte of wallet.cartes; let i=index"><td>n°{{i+1}}</td><td>{{carte.montant}}</td></tr></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                        </div>	
+							<div class="col-md-4 col-sm-4 card"  >
+								
+                            </div>
+                            
+						</div>	
+                    </div>
+                    
+                    <input type="submit" value="Ajouter" class="btn btn-success " [disabled]="carteDeCreditForm.invalid" >
+            </form>
+         
+    </div>
+</div>
+
+

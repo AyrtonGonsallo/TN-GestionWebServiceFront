@@ -8,7 +8,7 @@ import { LieuDeTravail } from "./LieuDeTravail.model"
 import { TransfertMultiple } from "./TransfertMultiple.model";
 
 export class Transfert{
-    id:number=0;
+    //id:number=0;
     reference:String="";
     codePin:String="";
     type:TypeTransfert=TypeTransfert.en_especes;
@@ -16,16 +16,16 @@ export class Transfert{
     delai_de_validite:Date=new Date;
     delai_de_desherence:Date=new Date;
     date_demission:Date=new Date;
-    date_de_blocage:Date=new Date;
-    date_de_deblocage:Date=new Date;
+    date_de_blocage?:Date;
+    date_de_deblocage?:Date;
     montant_transfert:number=0;
     montant_operation:number=0;
     comission:number=0;
     frais:number=0;
-    //emetteur:Emetteur=new Emetteur;
-    //agent:Agent=new Agent;
+    emetteur?:Emetteur;
+    agent?:Agent;
     pays_d_emission:String="Maroc";
-    //beneficiaire:Beneficiaire=new Beneficiaire;
+    beneficiaire?:Beneficiaire;
     motif:MotifTransfert=MotifTransfert.Frais_de_dépassement;
     transfertMultiple?:TransfertMultiple;
     lieuDeService?:LieuDeTravail;

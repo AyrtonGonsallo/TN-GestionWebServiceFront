@@ -3,8 +3,12 @@ import { Injectable } from '@angular/core';
 import { Agent } from '../model/Agent.model';
 import { ApiResponse } from '../model/Api.response';
 import { Beneficiaire } from '../model/Beneficiare.model';
+import { CarteDeCredit } from '../model/CarteDeCredit.model';
 import { Client } from '../model/Client.model';
 import { Emetteur } from '../model/Emetteur.model';
+import { GichetABillet } from '../model/GichetABillet.model';
+import { PointDeVente } from '../model/PointDeVente.model';
+import { Transfert } from '../model/Transfert.model';
 
 
 @Injectable({
@@ -55,6 +59,7 @@ export class ClientServiceService {
   public addClient(client:Client){
     return this.http.post("http://localhost:1945/add_client/",client);
   }
+
   public addAgent(client:Agent){
     return this.http.post("http://localhost:1945/add_Agent/",client);
   }
@@ -63,6 +68,18 @@ export class ClientServiceService {
   }
   public addEmetteur(client:Emetteur){
     return this.http.post("http://localhost:1945/add_Emetteur/",client);
+  }
+  public addCarte(carte:CarteDeCredit){
+    return this.http.post("http://localhost:1945/add_CarteDeCredit/",carte);
+  }
+  public addGichet(client:GichetABillet){
+    return this.http.post("http://localhost:1945/add_GichetABillet/",client);
+  }
+  public addPoint(client:PointDeVente){
+    return this.http.post("http://localhost:1945/add_PointDeVente/",client);
+  }
+  public addTransfert(client:Transfert){
+    return this.http.post("http://localhost:1945/add_Transfert/",client);
   }
 
 }

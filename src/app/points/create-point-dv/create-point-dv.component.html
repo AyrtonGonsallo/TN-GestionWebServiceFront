@@ -1,1 +1,68 @@
-<p>create-point-dv works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Raleway:500,800" rel="stylesheet">
+<div class="best-plan">
+    <div class="container" >
+					<div class="best-plan__head">
+						<div class="row">
+							<div class="col-md-12">
+								<h3 class="best-plan__title">Ajouter Point De Vente</h3>								
+							</div>
+						</div>
+					</div>
+             <form class="form-horizontal" [formGroup]="pointDeVenteForm" (ngSubmit)="ajouter()" >
+
+					<div class="b_plan_body">					
+						<div class="row">
+							<div class="col-md-4 col-sm-4 card" >
+                                <h2>Donnees Point de vente</h2>
+								
+                                    <div class="form-group">
+                                        <label for="montant_maximal" class="cols-sm-2 control-label">montant disponible</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="number" step="2000" class="form-control" autocomplete="off" name="montant_maximal" id="montant_maximal" placeholder="montant_maximal" formControlName="montant_maximal"/>
+                                            </div>
+                                        </div>
+                                        <label for="ville" class="cols-sm-2 control-label">ville</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" autocomplete="off" name="ville" id="ville"  placeholder="ville" formControlName="ville"/>
+                                            </div>
+                                        </div>
+                                        <label for="numero_de_ville" class="cols-sm-2 control-label">numero de ville</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" step="1" name="numero_de_ville" id="numero_de_ville"   formControlName="numero_de_ville"/>
+                                            </div>
+                                        </div>
+                                        <label for="pays" class="cols-sm-2 control-label">pays</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name="pays" id="pays"   formControlName="pays"/>
+                                            </div>
+                                        </div>
+                                   </div>
+                           </div>
+                           
+							<div class="col-md-4 col-sm-4 card" >
+                               
+                        </div>	
+							<div class="col-md-4 col-sm-4 card"  >
+								
+                            </div>
+                            
+						</div>	
+                    </div>
+                    
+                    <input type="submit" value="Ajouter" class="btn btn-success " [disabled]="pointDeVenteForm.invalid" >
+            </form>
+         
+    </div>
+</div>
