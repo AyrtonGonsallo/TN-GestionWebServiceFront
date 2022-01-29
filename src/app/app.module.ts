@@ -36,6 +36,8 @@ import { CreateGichetComponent } from './gichets/create-gichet/create-gichet.com
 import { CreatePieceComponent } from './pieces/create-piece/create-piece.component';
 import { CreatePointDVComponent } from './points/create-point-dv/create-point-dv.component';
 import { CreateWalletComponent } from './wallets/create-wallet/create-wallet.component';
+import { AjouterTransfertMComponent } from './transfertM/ajouter-transfert-m/ajouter-transfert-m.component';
+import { GetTransfertsMComponent } from './transfertM/get-transferts-m/get-transferts-m.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import { CreateWalletComponent } from './wallets/create-wallet/create-wallet.com
     CreateGichetComponent,
     CreatePieceComponent,
     CreatePointDVComponent,
-    CreateWalletComponent
+    CreateWalletComponent,
+    AjouterTransfertMComponent,
+    GetTransfertsMComponent
   ],
   imports: [
     BrowserModule,

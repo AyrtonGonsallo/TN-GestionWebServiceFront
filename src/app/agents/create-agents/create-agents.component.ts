@@ -63,6 +63,7 @@ export class CreateAgentsComponent implements OnInit {
       this.agent.telephone=agentValue['telephone'];
       this.agent.sexe=agentValue['sexe'];
       this.agent.profession="Agent";
+      this.agent.salary=agentValue['salary'];
       this.agent.pays_d_adresse=agentValue['pays_d_adresse'];
       this.agent.adresselegale=agentValue['adresse_legale'];
       this.agent.email=agentValue['email'];

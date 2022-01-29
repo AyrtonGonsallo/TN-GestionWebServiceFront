@@ -19,6 +19,8 @@ import { CreatePieceComponent } from './pieces/create-piece/create-piece.compone
 import { GetPiecesIdentitesComponent } from './pieces/get-pieces-identites/get-pieces-identites.component';
 import { CreatePointDVComponent } from './points/create-point-dv/create-point-dv.component';
 import { GetPointsDeventeComponent } from './points/get-points-devente/get-points-devente.component';
+import { AjouterTransfertMComponent } from './transfertM/ajouter-transfert-m/ajouter-transfert-m.component';
+import { GetTransfertsMComponent } from './transfertM/get-transferts-m/get-transferts-m.component';
 import { AddTransfertComponent } from './transferts/add-transfert/add-transfert.component';
 import { GetTransfertsComponent } from './transferts/get-transferts/get-transferts.component';
 import { CreateWalletComponent } from './wallets/create-wallet/create-wallet.component';
@@ -47,7 +49,9 @@ const routes: Routes = [
   {path:"addGichetABillet",component:CreateGichetComponent},
   {path:"addCompte",component:CreateCompteComponent},
   {path:"getBeneficiaires",component:GetBeneficiaireComponent},
-  {path:"addTransfert",component:AddTransfertComponent},
+  {path:"addCompte",component:CreateCompteComponent},
+  {path:"getTransfertMs",component:GetTransfertsMComponent},
+  {path:"addTransfertM",component:AjouterTransfertMComponent},
   {path:"",redirectTo:"getClients",pathMatch:"full"}
 ];
 

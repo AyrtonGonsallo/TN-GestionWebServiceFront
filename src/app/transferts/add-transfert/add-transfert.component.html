@@ -132,7 +132,7 @@
                             <th>Id</th>
                             <th> Nom</th>
                             <th> Position</th>
-                            
+                            <th> Id Emetteurs</th>
                         </tr>
                     </thead>
                     <tbody class="thead-light">
@@ -140,6 +140,7 @@
                             <td >{{beneficiaire.idClient}}</td>
                             <td >{{beneficiaire.nom}} {{beneficiaire.prenom}}</td>
                             <td >{{i}}</td>
+                            <td ><i *ngFor="let emetteur of beneficiaire.emetteurs" >{{emetteur.idClient}}, </i></td>
                         </tr>
                     </tbody>
                     </table>
@@ -149,7 +150,7 @@
                     <table class="table table-dark table-hover">
                     <thead class="">
                     <tr class="text-primary bg-light">
-                        <th>Id</th>
+                        <th>Id Emetteur</th>
                         <th> Nom</th>
                         <th> Position</th>
                         

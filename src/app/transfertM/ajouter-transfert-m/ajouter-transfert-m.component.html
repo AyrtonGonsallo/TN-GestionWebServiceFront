@@ -1,0 +1,218 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Raleway:500,800" rel="stylesheet">
+    <div class="best-plan">
+        <div class="container">
+                <div class="best-plan__head">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="best-plan__title">Ajouter Transfert Multiple</h3>								
+                        </div>
+                    </div>
+                </div>
+                <form class="form-horizontal" [formGroup]="transfertMForm" (ngSubmit)="ajouter()" >
+
+		            <div class="b_plan_body">					
+			            <div class="row">
+							<div class="col-md-4 col-sm-4 card" > 
+                                <div style="margin: 10px;background-color: antiquewhite;">
+                                    <label for="emetteur" class="cols-sm-2 control-label">emetteur</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" autocomplete="off" name="emetteur" id="emetteur"  placeholder="emetteur" formControlName="emetteur"/>
+                                        </div>
+                                    </div>
+                                    <label for="agent" class="cols-sm-2 control-label">agent</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" autocomplete="off" name="agent" id="agent"  placeholder="agent" formControlName="agent"/>
+                                        </div>
+                                    </div>
+                                    <label for="delai_de_validite" class="cols-sm-2 control-label">delai de validite</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <input type="date" class="form-control" step="1" name="delai_de_validite" id="delai_de_validite"   formControlName="delai_de_validite"/>
+                                        </div>
+                                    </div>
+                                    <label for="delai_de_desherence" class="cols-sm-2 control-label">delai_de_desherence</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <input type="date" class="form-control" step="1" name="delai_de_desherence" id="delai_de_desherence"   formControlName="delai_de_desherence"/>
+                                        </div>
+                                    </div>
+                                    <label for="date_demission" class="cols-sm-2 control-label">date_demission</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <input type="date" class="form-control" step="1" name="date_demission" id="date_demission"   formControlName="date_demission"/>
+                                        </div>
+                                    </div>
+                                    <label for="lieuDeDemande" class="cols-sm-2 control-label">lieuDeDemande</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" autocomplete="off" name="lieuDeDemande" id="lieuDeDemande"  placeholder="lieuDeDemande" formControlName="lieuDeDemande"/>
+                                            </div>
+                                        </div>
+                                    <label for="motif" class="cols-sm-2 control-label">motif</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <select name="motif" id="motif" formControlName="motif">
+                                                <option value='' disabled selected>motif</option>
+                                                <option  value="Soutien_familial"> Soutien_familial </option>
+                                                <option  value="Epargne_investissement"> Epargne_investissement </option>
+                                                <option  value="Cadeau"> Cadeau </option>
+                                                <option  value="Paiement_de_biens_et_de_services"> Paiement_de_biens_et_de_services </option>
+                                                <option  value="Frais_de_dépassement"> Frais_de_dépassement </option>
+                                                <option  value="Frais_d_éducation"> Frais_d_éducation </option>
+                                                <option  value="Location_Hypothèque"> Location_Hypothèque </option>
+                                                <option  value="Aide_de_secours_Médicale"> Aide_de_secours_Médicale </option>
+                                                <option  value="Revenu_d_un_site_internet"> Revenu_d_un_site_internet </option>
+                                                <option  value="Dépenses_salariales"> Dépenses_salariales </option>
+                                                <option  value="Frais_de_loterie_ou_récompense_taxes"> Frais_de_loterie_ou_récompense_taxes </option>
+                                                <option  value="Prêt"> Prêt </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="background-color: rgb(225, 235, 231); margin-bottom: 10px;" formArrayName="transferts" *ngFor="let transfert of transfertMForm.controls.transferts?.value; let i=index">
+                                    <h5>transfert n°{{idBeneficiaires[i]}}</h5>
+                                    <ng-container [formGroupName]="i"  >
+                                        <label for="reference" class="cols-sm-2 control-label">reference</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="text" maxlength="8" minlength="8" class="form-control" autocomplete="off" name="reference" id="reference" placeholder="reference" formControlName="reference"/>
+                                            </div>
+                                        </div>
+                                        <label for="codePin" class="cols-sm-2 control-label">codePin</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="text" maxlength="10" minlength="8" class="form-control" autocomplete="off" name="codePin" id="codePin"  placeholder="codePin" formControlName="codePin"/>
+                                            </div>
+                                        </div>
+                                        <label for="type" class="cols-sm-2 control-label">type</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <select name="type" id="type" formControlName="type">
+                                                    <option value='' disabled selected>type</option>
+                                                    <option  value="en_especes"> en especes </option>
+                                                    <option  value="par_debit_de_compte"> par debit de compte </option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <label for="idB" class="cols-sm-2 control-label" >beneficiaire</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="number"  class="form-control" name="idB" id="idB"  formControlName="idBeneficiaire"/>
+                                            </div>
+                                        </div>
+                                        <label for="montant" class="cols-sm-2 control-label" >montant</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="number" step="2000"  class="form-control" name="montant" id="montant"  formControlName="montant"/>
+                                            </div>
+                                        </div>
+                                        
+                                        <label for="lieuDeService" class="cols-sm-2 control-label">lieuDeService</label>
+                                        <div class="cols-sm-10">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" autocomplete="off" name="lieuDeService" id="lieuDeService"  placeholder="lieuDeService" formControlName="lieuDeService"/>
+                                            </div>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                                <input type="button" value="Ajouter Transfert" class="btn btn-primary" (click)="AjouterTransfert()">
+                            </div>
+                           
+                            <div class="col-md-4 col-sm-4 card" >
+                                    <h1>Tout les beneficiaires</h1>
+                                    <table class="table table-dark table-hover">
+                                    <thead class="">
+                                    <tr class="text-primary bg-light">
+                                        <th>Id</th>
+                                        <th> Nom</th>
+                                        <th> Position</th>
+                                        <th> Id Emetteurs</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="thead-light">
+                                    <tr *ngFor="let beneficiaire of beneficiaires; let i=index">
+                                        <td >{{beneficiaire.idClient}}</td>
+                                        <td >{{beneficiaire.nom}} {{beneficiaire.prenom}}</td>
+                                        <td >{{i}}</td>
+                                        <td ><i *ngFor="let emetteur of beneficiaire.emetteurs" >{{emetteur.idClient}}, </i></td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>	
+                            <div class="col-md-4 col-sm-4 card"  >
+                                <h1>Tout les emetteurs</h1>
+                                <table class="table table-dark table-hover">
+                                    <thead class="">
+                                    <tr class="text-primary bg-light">
+                                        <th>Id Emetteur</th>
+                                        <th> Nom</th>
+                                        <th> Position</th>
+                                        
+                                    </tr>
+                                    </thead>
+                                    <tbody class="thead-light">
+                                        <tr *ngFor="let emetteur of emetteurs; let i=index">
+                                            <td >{{emetteur.idClient}}</td>
+                                            <td >{{emetteur.nom}} {{emetteur.prenom}}</td>
+                                            <td >{{i}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>		
+                            </div>
+                        </div>                
+						
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 card" > 
+                                <h1>Tout les agents</h1>
+                                <table class="table table-dark table-hover">
+                                    <thead class="">
+                                    <tr class="text-primary bg-light">
+                                        <th>Id</th>
+                                        <th> Nom</th>
+                                        <th> Position</th>
+                                        
+                                    </tr>
+                                    </thead>
+                                    <tbody class="thead-light">
+                                        <tr *ngFor="let agent of agents; let i=index">
+                                            <td >{{agent.idClient}}</td>
+                                            <td >{{agent.nom}} {{agent.prenom}}</td>
+                                            <td >{{i}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4 col-sm-4 card" >  
+                                <h1>Tout les pointDeVentes</h1>
+                                <table class="table table-dark table-hover">
+                                    <tbody *ngFor="let pointDeVente of pointDeVentes; let i=index"> 
+                                        <tr><th>numero_de_ville</th> <td >{{pointDeVente.numero_de_ville}}</td></tr>
+                                        <tr><th>pays</th> <td >{{pointDeVente.pays}}</td> </tr>
+                                        <tr><th>ville</th><td>{{pointDeVente.ville}}</td> </tr>
+                                        <tr> <th>montant_maximal</th> <td>{{pointDeVente.montant_maximal	}}</td></tr>
+                                        <tr><th>Position</th><td >{{i}}</td></tr>   
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4 col-sm-4 card" > 
+                                rien
+                            </div>
+                        </div>    
+                
+                    </div>
+                    <input type="submit" value="Ajouter" class="btn btn-success " [disabled]="transfertMForm.invalid" >
+                </form>
+        </div>
+    </div>
